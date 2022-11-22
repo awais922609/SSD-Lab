@@ -23,7 +23,7 @@ def DNSRequest(domain):
     return ips
 
 def SubdomainSearch(domain, dictionary,nums):
-    successes = []
+    //successes = []
     for word in dictionary:
         subdomain = word+"."+domain
         DNSRequest(subdomain)
@@ -31,6 +31,7 @@ def SubdomainSearch(domain, dictionary,nums):
             for i in range(0,10):
                 s = word+str(i)+"."+domain
                 DNSRequest(s)
+
 
 domain = "google.com"
 d = "subdomains.txt"
