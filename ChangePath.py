@@ -16,11 +16,11 @@ def editPathValue(reghive,regpath,targetdir):
     reg = winreg.ConnectRegistry(None,reghive)
     key = winreg.OpenKey(reg,regpath,access=winreg.KEY_SET_VALUE)
     winreg.SetValueEx(key,"Path",0,winreg.REG_EXPAND_SZ,newpath)
-    
 # Modify user path
 #reghive = winreg.HKEY_CURRENT_USER
 #regpath = "Environment"
 targetdir = os.getcwd()
+
 
 #editPathValue(reghive,regpath,targetdir)
 
